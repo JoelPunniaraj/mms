@@ -2,14 +2,11 @@ import os
 import streamlit as stl
 import sqlite3 as sql
 
-# Set up Streamlit layout
 stl.set_page_config(layout="wide")
 
-# Connect to the SQLite database
 connect = sql.connect(r'C:\Users\joelp\python\projects\mms\movies.db')
 c = connect.cursor()
 
-# Function to add a movie to the database
 def add_movie():
     title = stl.text_input("Title:")
     director = stl.text_input("Director:")
@@ -46,7 +43,6 @@ def edit_movie():
         stl.write("Movie Not Found!")
         return
 
-    # Define the choices for editing
     edit_options = ["Title", "Director", "Acting", "Writing", "Production", "Screenplay", "Cinematography", "Experience", "All"]
     choice = stl.selectbox("What Do You Want to Edit?", edit_options)
 
