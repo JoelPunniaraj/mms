@@ -1,0 +1,179 @@
+PS C:\Users\joelp\python\projects\mms> & C:/Users/joelp/AppData/Local/Programs/Python/Python312/python.exe c:/Users/joelp/python/projects/mms/Scripts/main.py
+
+Welcome to My Movie List!
+
+List Options:      
+> View
+> Add
+> Edit
+> Remove
+> Exit
+
+Enter Your Choice: view
+View Options:      
+
+> All Movies       
+> By Director      
+
+Enter Your Choice: all
+
+('2001: A Space Odyssey', 'Stanley Kubrick', 779898, 8.5)
+('A Quiet Place', 'John Krasinski', 898889, 9.1)
+('A Quiet Place Part II', 'John Krasinski', 888878, 8.7)
+('Arrival', 'Denis Villeneuve', 788898, 8.7)
+('Avatar', 'James Cameron', 889899, 9.1)
+('Avatar: The Way of Water', 'James Cameron', 879798, 8.5)
+('Batman Begins', 'Christopher Nolan', 878888, 8.5)
+('Blade Runner 2049', 'Denis Villeneuve', 789898, 8.8)
+('Bridge of Spies', 'Steven Spielberg', 988788, 8.8)
+('Captain America: Civil War', 'Russo Brothers', 898879, 9.0)
+('Captain America: The Winter Soldier', 'Russo Brothers', 898878, 8.9)
+('Captain American: The First Avenger', 'Joe Johnston', 777878, 8.0)  
+('Catch Me If You Can', 'Steven Spielberg', 898878, 8.9)
+('Dawn of The Planet of The Apes', 'Matt Reeves', 998888, 9.3)        
+('Django', 'Quentin Tarantino', 999889, 9.5)
+('Dune: Part One', 'Denis Villeneuve', 789898, 8.8)
+('Dune: Part Two', 'Denis Villeneuve', 899999, 9.6)
+('Dunkirk', 'Christopher Nolan', 889999, 9.4)
+('Get Out', 'Jordan Peele', 887878, 8.5)
+('GoodFellas', 'Martin Scorsese', 887878, 8.5)
+('Hacksaw Ridge', 'Mel Gibson', 978899, 9.0)
+('Inception', 'Christopher Nolan', 889899, 9.1)
+('Inglorious Basterds', 'Quentin Tarantino', 888988, 9.0)
+('Killers Of The Flower Moon', 'Martin Scorsese', 978888, 8.8)        
+('Lincoln', 'Steven Spielberg', 998889, 9.4)
+('Memento', 'Christopher Nolan', 998979, 9.5)
+('Napoleon', 'Ridley Scott', 868777, 7.8)
+('No Country for Old Men', 'Coen Brothers', 998889, 9.4)
+('Nope', 'Jordan Peele', 778888, 8.3)
+('Once Upon A Time In Hollywood', 'Quentin Tarantino', 988888, 9.0)   
+('Oppenheimer', 'Christopher Nolan', 999999, 9.9)
+('Prisoners', 'Denis Villeneuve', 998878, 9.1)
+('Prometheus', 'Ridley Scott', 867688, 7.7)
+('Pulp Fiction', 'Quentin Tarantino', 988878, 8.9)
+('Rise of The Planet of The Apes', 'Rupert Wyatt', 889888, 8.9)       
+('Shutter Island', 'Martin Scorsese', 897889, 9.0)
+('Sicario', 'Denis Villeneuve', 888898, 8.9)
+('Tenet', 'Christopher Nolan', 779898, 8.5)
+('The Batman', 'Matt Reeves', 888999, 9.3)
+('The Dark Knight', 'Christopher Nolan', 998889, 9.4)
+('The Dark Knight Rises', 'Christopher Nolan', 888988, 9.0)
+('The Departed', 'Martin Scorsese', 897779, 8.7)
+('The Irishman', 'Martin Scorsese', 978788, 8.5)
+('The Martian', 'Ridley Scott', 998888, 9.3)
+('The Shining', 'Stanley Kubrick', 988879, 9.0)
+('The Terminator', 'James Cameron', 788989, 8.9)
+('The Wolf of Wall Street', 'Martin Scorsese', 989889, 9.3)
+('War For The Planet of The Apes', 'Matt Reeves', 998889, 9.4)
+
+List Options:
+> View
+> Add
+> Edit
+> Remove
+> Exit
+
+Enter Your Choice: view
+View Options:
+
+> All Movies
+> By Director
+
+Enter Your Choice: director
+Enter The Director's Name: Christopher Nolan
+
+('Batman Begins', 'Christopher Nolan', 878888, 8.5)
+('Dunkirk', 'Christopher Nolan', 889999, 9.4)
+('Inception', 'Christopher Nolan', 889899, 9.1)
+('Memento', 'Christopher Nolan', 998979, 9.5)
+('Oppenheimer', 'Christopher Nolan', 999999, 9.9)
+('Tenet', 'Christopher Nolan', 779898, 8.5)
+('The Dark Knight', 'Christopher Nolan', 998889, 9.4)
+('The Dark Knight Rises', 'Christopher Nolan', 888988, 9.0)
+
+Average Rating for Movies by Christopher Nolan: 9.2
+Best Rated Movies by Christopher Nolan:
+1. Oppenheimer - 9.9
+2. Memento - 9.5
+3. Dunkirk - 9.4
+
+List Options:
+> View
+> Add
+> Edit
+> Remove
+> Exit
+
+Enter Your Choice: view
+View Options:
+
+> All Movies
+> By Director
+
+Enter Your Choice: director
+Enter The Director's Name: Ridley Scott
+
+('Napoleon', 'Ridley Scott', 868777, 7.8)
+('Prometheus', 'Ridley Scott', 867688, 7.7)
+('The Martian', 'Ridley Scott', 998888, 9.3)
+
+Average Rating for Movies by Ridley Scott: 8.3
+Best Rated Movies by Ridley Scott:
+1. The Martian - 9.3
+2. Napoleon - 7.8
+3. Prometheus - 7.7
+
+List Options:
+> View
+> Add
+> Edit
+> Remove
+> Exit
+
+Enter Your Choice: add
+
+Title: Alien
+Director: Ridley Scott
+Acting: 8
+Writing: 8
+Production: 9
+Screenplay: 8
+Cinematography: 7
+Experience: 8
+Movie Added Successfully!
+
+List Options:
+> View
+> Add
+> Edit
+> Remove
+> Exit
+
+Enter Your Choice: view
+View Options:
+
+> All Movies
+> By Director
+
+Enter Your Choice: director
+Enter The Director's Name: Ridley Scott
+
+('Alien', 'Ridley Scott', 889878, 8.8)
+('Napoleon', 'Ridley Scott', 868777, 7.8)
+('Prometheus', 'Ridley Scott', 867688, 7.7)
+('The Martian', 'Ridley Scott', 998888, 9.3)
+
+Average Rating for Movies by Ridley Scott: 8.4
+Best Rated Movies by Ridley Scott:
+1. The Martian - 9.3
+2. Alien - 8.8
+3. Napoleon - 7.8
+
+List Options:
+> View
+> Add
+> Edit
+> Remove
+> Exit
+
+Enter Your Choice:   
