@@ -108,7 +108,7 @@ def view_directors():
         if top_directors:
             print("Top Directors by Average Movie Rating:")
             for i, (director, avg_rating) in enumerate(top_directors, start=1):
-                print(f"{i}. {director.title()} - {avg_rating}")  # Capitalize the director's name
+                print(f"{i}. {director.title()} - {avg_rating}") 
             return
         else:
             print("No Movies Found!")
