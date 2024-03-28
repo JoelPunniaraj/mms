@@ -117,31 +117,31 @@ if choice == 'Home':
             title = os.path.splitext(image_files[0])[0].replace('_', ' ')
             image_path = os.path.join(posters_dir, image_files[0])
             with col5:
-                stl.image(image_path, caption=f"5. {title}", width=200) 
+                stl.image(image_path, caption=title, width=200) 
 
         if len(image_files) >= 2:
             title = os.path.splitext(image_files[1])[0].replace('_', ' ')
             image_path = os.path.join(posters_dir, image_files[1])
             with col4:
-                stl.image(image_path, caption=f"4. {title}", width=200)
+                stl.image(image_path, caption=title, width=200)
 
         if len(image_files) >= 3:
             title = os.path.splitext(image_files[2])[0].replace('_', ' ')
             image_path = os.path.join(posters_dir, image_files[2])
             with col3:
-                stl.image(image_path, caption=f"3. {title}", width=200)
+                stl.image(image_path, caption=title, width=200)
 
         if len(image_files) >= 4:
             title = os.path.splitext(image_files[3])[0].replace('_', ' ')
             image_path = os.path.join(posters_dir, image_files[3])
             with col2:
-                stl.image(image_path, caption=f"2. {title}", width=200)
+                stl.image(image_path, caption=title, width=200)
 
         if len(image_files) >= 5:
             title = os.path.splitext(image_files[4])[0].replace('_', ' ')
             image_path = os.path.join(posters_dir, image_files[4])
             with col1:
-                stl.image(image_path, caption=f"1. {title}", width=200)
+                stl.image(image_path, caption=title, width=200)
     else:
         stl.write("No Movies Found!")
 
