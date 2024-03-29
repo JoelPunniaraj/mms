@@ -1,4 +1,4 @@
-# mms
+# Movie Management Software (MMS)
 Movie Management Software
 Written by Joel Punniaraj
 
