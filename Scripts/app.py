@@ -1,7 +1,7 @@
 import os
 import streamlit as stl
 import sqlite3 as sql
-from PIL import Image
+from PIL import Image, ImageOps
 
 stl.set_page_config(layout="wide")
 connect = sql.connect(r'C:\Users\joelp\python\projects\mms\movies.db')
@@ -70,12 +70,12 @@ def edit_movie():
 
     if field_name == 'all':
         stl.write("")
-        acting = stl.slider("New Rating for Acting:", min_value=1, max_value=9, value=5)
-        writing = stl.slider("New Rating for Writing:", min_value=1, max_value=9, value=5)
-        production = stl.slider("New Rating for Production:", min_value=1, max_value=9, value=5)
-        screenplay = stl.slider("New Rating for Screenplay:", min_value=1, max_value=9, value=5)
-        cinematography = stl.slider("New Rating for Cinematography:", min_value=1, max_value=9, value=5)
-        experience = stl.slider("New Rating for Experience:", min_value=1, max_value=9, value=5)
+        acting = stl.slider("New Rating for Acting:", min_value=1, max_value=9, value=acting)
+        writing = stl.slider("New Rating for Writing:", min_value=1, max_value=9, value=writing)
+        production = stl.slider("New Rating for Production:", min_value=1, max_value=9, value=production)
+        screenplay = stl.slider("New Rating for Screenplay:", min_value=1, max_value=9, value=screenplay)
+        cinematography = stl.slider("New Rating for Cinematography:", min_value=1, max_value=9, value=cinematography)
+        experience = stl.slider("New Rating for Experience:", min_value=1, max_value=9, value=experience)
 
         if stl.button("Submit"):
             try:
@@ -119,9 +119,13 @@ def resize_images(directory, output_size=(200, 300)):
 
 choice = stl.sidebar.selectbox("Select Option:", ("Home", "Explore", "Settings"))
 
-if choice == 'Home':
-    
-    stl.title("Movie Management Software")
+def add_border(image_path, border_size=3, border_color="#B2C8DE"):
+    image = Image.open(image_path)
+    bordered_image = ImageOps.expand(image, border=border_size, fill=border_color)
+    return bordered_image
+
+if choice == 'Home':  
+    stl.title("Movie Rating Management Software ([Github](https://github.com/JoelPunniaraj/mms))")
     posters_dir = r'C:\Users\joelp\python\projects\mms\posters'
 
     c.execute('''SELECT title
@@ -136,8 +140,8 @@ if choice == 'Home':
         
         resize_images(posters_dir)
 
-        rows = 3
-        cols = 5
+        rows = 7
+        cols = 7
         images_per_page = rows * cols
 
         for i in range(min(len(top_movie_titles), images_per_page)):
@@ -151,7 +155,9 @@ if choice == 'Home':
                 if col_index == 0:
                     cols_container = stl.columns(cols)
                 with cols_container[col_index]:
-                    stl.image(image_path, caption=title, width=200)
+                    bordered_image = add_border(image_path)
+                    stl.image(bordered_image, caption=title, width=170)
+                    
             else:
                 stl.write(f"Image not found for {title}")
     else:
@@ -195,13 +201,12 @@ elif choice == 'Explore':
                 stl.write(f"<b>Production:</b> {production}", unsafe_allow_html=True)
                 stl.write(f"<b>Screenplay:</b> {screenplay}", unsafe_allow_html=True)
                 stl.write(f"<b>Cinematography:</b> {cinematography}", unsafe_allow_html=True)
-                stl.write(f"<b>Experience:</b> {experience}", unsafe_allow_html=True)             
+                stl.write(f"<b>Experience:</b> {experience}", unsafe_allow_html=True)
+
             else:
                 stl.write("Movie not found.")
         else:
             pass
-
-
 
 elif choice == 'Settings':
     setting_option = stl.sidebar.selectbox("Settings Option:", ("Add", "Edit", "Remove"))
