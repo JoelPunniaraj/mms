@@ -140,8 +140,8 @@ if choice == 'Home':
         
         resize_images(posters_dir)
 
-        rows = 7
-        cols = 7
+        rows = 10
+        cols = 5
         images_per_page = rows * cols
 
         for i in range(min(len(top_movie_titles), images_per_page)):
@@ -156,7 +156,7 @@ if choice == 'Home':
                     cols_container = stl.columns(cols)
                 with cols_container[col_index]:
                     bordered_image = add_border(image_path)
-                    stl.image(bordered_image, caption=title, width=170)
+                    stl.image(bordered_image, caption=title, width=250)
                     
             else:
                 stl.write(f"Image not found for {title}")
