@@ -116,6 +116,7 @@ def resize_images(directory, output_size=(200, 300)):
                     print(f"Resized {filename} successfully")
             except Exception as e:
                 print(f"Error resizing {filename}: {e}")
+                
 
 choice = stl.sidebar.selectbox("Select Option:", ("Home", "Explore", "Settings"))
 
@@ -185,7 +186,7 @@ elif choice == 'Explore':
 
     elif ranking_option == "Search":
 
-        search_query = stl.text_input("Title of the Movie:")
+        search_query = stl.text_input("Movie Title:")
         search_query = search_query.strip()
 
         if search_query:
