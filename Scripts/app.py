@@ -120,7 +120,7 @@ def resize_images(directory, output_size=(200, 300)):
 
 choice = stl.sidebar.selectbox("Select Option:", ("Home", "Explore", "Settings"))
 
-def add_border(image_path, border_size=3, border_color="#B2C8DE"):
+def add_border(image_path, border_size=3, border_color="#74808D"):
     image = Image.open(image_path)
     bordered_image = ImageOps.expand(image, border=border_size, fill=border_color)
     return bordered_image
